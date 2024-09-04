@@ -1,0 +1,21 @@
+# Read CSV file
+df = id.read_csv('your_file.csv')
+
+# Handle missing values
+df = df.fillna(method='ffill')
+
+# Remove duplicates
+df = df.drop_duplicates()
+
+# Filter data
+filtered_df = df[df['column_name'] > value]
+
+# Sort data
+sorted_df = df.sort_values(by='column_name', ascending=False)
+
+# Group data
+grouped_df = df.groupby('column_name').agg({'another_column': 'mean'})
+
+print(filtered_df.head())
+print(sorted_df.head())
+print(grouped_df.head())
